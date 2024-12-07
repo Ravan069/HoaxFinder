@@ -24,7 +24,8 @@ def valid(query, news):
     scores = model.predict(pairs, show_progress_bar=False)
     
     # Calculate average score
-    avg_score = sum(scores) / len(scores) if scores else 0
+    avg_score = sum(scores) / len(scores) if len(scores) > 0 else 0
+
     
     # Display news and results
     st.write("## 📰 According to Google News:")
