@@ -1,3 +1,4 @@
 streamlit
 GoogleNews
 transformers
+sentence_transformers

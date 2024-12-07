@@ -17,13 +17,12 @@ def valid(query, news):
     list_pairs=list(pairs)
     scores1 = model.predict(list_pairs, show_progress_bar=False)
     
-    sum=0 
+    result = 0 
     for score in scores1:
         sum+=score
+        result = sum/len(scores1)
         
     print_news = str(news)    
-         
-    result = sum/len(scores1)
          
     if result >= 0.8 :
         st.write("""
