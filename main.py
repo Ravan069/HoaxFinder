@@ -43,7 +43,7 @@ def valid(query, news):
             """)
 
     for news_item in news:
-        st.write(f"- {news_item}")
+        st.write(f"{news_item}")
 
 if __name__ == "__main__":
     if query := st.text_input("Enter the news title"):
